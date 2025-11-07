@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServicePersonas } from '../../services/service.personas';
 import { Persona } from '../../models/persona';
 import { CommonModule } from '@angular/common';
@@ -10,10 +10,12 @@ import { CommonModule } from '@angular/common';
   providers: [ServicePersonas],
   imports: [CommonModule],
 })
-export class PersonasComponent {
+export class PersonasComponent implements OnInit{
   public personas!: Array<Persona>;
-  constructor(private service: ServicePersonas) {
-    service.getPersonas().then(response => {
+  constructor(private _service: ServicePersonas) {
+  }
+  ngOnInit(): void {
+    this._service.getPersonas().then(response => {
         this.personas = response
     })
   }
