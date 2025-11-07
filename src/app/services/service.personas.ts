@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { environment } from "../../environments/environment.development";
+import axios from "axios";
 
 @Injectable()
 export class ServicePersonas{
@@ -15,5 +16,26 @@ export class ServicePersonas{
             })
         })
         return promise;
+    }
+
+    getPersonsasAxios():Promise<any>{
+        let url = environment.urlPers
+        let request = "api/personas"
+        let promise = new Promise((resolve) => {
+            axios.get(url + request).then(response => {
+                resolve(response.data)
+            })
+        })
+        return promise
+    }
+
+    getPersonasFetch():Promise<any> {
+        let url = environment.urlPers
+        let request = "api/personas"
+        let promise = new Promise((resolve) => {
+            fetch(url +request)
+            .then(response => response.json())
+        })
+        return promise       
     }
 }

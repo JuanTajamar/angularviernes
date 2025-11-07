@@ -1,0 +1,71 @@
+/* --- Estilo Tarjeta Veraniega (Arena y Mar) --- */
+
+.summer-card {
+  /* Fondo blanco limpio, como una nube de verano */
+  background-color: #FFFFFF;
+  
+  /* Quitamos el borde por defecto de Bootstrap */
+  border: none;
+  
+  /* Bordes redondeados más suaves */
+  border-radius: 10px; 
+  
+  /* La sombra es clave: la hacemos suave y natural,
+    como si el sol le diera desde arriba.
+  */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  
+  /* Transición suave para el efecto hover */
+  transition: all 0.3s ease-in-out;
+  
+  /* Importante: Esto evita que el borde superior 
+    se salga del borde redondeado.
+  */
+  overflow: hidden; 
+}
+
+/* Efecto "flotante" al pasar el ratón.
+  La tarjeta se levanta y la sombra se hace más grande.
+*/
+.summer-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* En lugar de un borde completo, usamos un borde superior
+  grueso con nuestro color "turquesa" para darle el
+  acento de color.
+*/
+.summer-card .card-body {
+  border-top: 6px solid #00A896; /* Color Turquesa/Agua */
+  padding: 1.5rem;
+}
+
+/* El título de la tarjeta, con el color "océano" oscuro */
+.summer-card .card-title {
+  color: #007B8A;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* Texto de la tarjeta, más oscuro para legibilidad */
+.summer-card .card-text {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Estilo para nuestro "badge" personalizado
+  que reemplazó a "bg-primary".
+*/
+.summer-badge {
+  background-color: #FFD700; /* Amarillo "Sol" */
+  color: #333; /* Texto oscuro para leerse bien sobre amarillo */
+  font-weight: 600;
+  padding: 0.5em 0.8em;
+  font-size: 0.8rem;
+  
+  /* Mantenemos la forma de píldora de Bootstrap */
+  border-radius: 50rem; 
+}

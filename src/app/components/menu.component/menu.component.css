@@ -1,0 +1,46 @@
+/* --- Estilo Navbar Veraniego (Océano y Sol) --- */
+
+.summer-nav {
+  /* Fondo color océano tropical */
+  background-color: #007B8A;
+  
+  /* Sombra suave para que "flote" */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+/* Estilo para el logo */
+.summer-nav .navbar-brand {
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.summer-nav .navbar-brand:hover {
+  color: #FFD700; /* Amarillo "Sol" */
+}
+
+/* Estilo para los enlaces <a> (el .nav-link de Bootstrap) */
+.summer-nav .nav-link {
+  color: #E0FFFF; /* Blanco espuma de mar */
+  font-weight: 500;
+  margin-left: 10px;
+  border-bottom: 3px solid transparent; /* Borde inferior invisible */
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el ratón (hover) y en la página activa (active) */
+.summer-nav .nav-link:hover,
+.summer-nav .nav-link.active {
+  color: #FFFFFF;
+  border-bottom-color: #FFD700; /* El borde se vuelve color sol */
+}
+
+/* Estilo del botón "sandwich" en móvil */
+.summer-nav .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.summer-nav .navbar-toggler-icon {
+  /* Cambia el color del ícono SVG a nuestro amarillo "Sol" */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 215, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}

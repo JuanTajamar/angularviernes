@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+/* --- 1. Importar la Fuente Veraniega (Si no lo has hecho) --- */
+/* Esta línea debe estar al inicio de tu CSS */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+
+/* --- 2. Estilo Veraniego Global para el BODY --- */
+
+body {
+  /* --- El Fondo de Playa --- */
+  
+  /* 1. Un color de fondo sólido como fallback */
+  background-color: #007B8A; /* Nuestro color océano */
+
+  /* 2. La imagen de fondo. 
+     Usa una URL de una foto de playa (ej: de Unsplash, Pexels, o una tuya)
+  */
+  /* Esta es una foto de ejemplo. ¡Cámbiala por la que más te guste!
+     (Foto de Unsplash: https://unsplash.com/photos/OxqIS3fCC-M)
+  */
+  background-image: 
+    /* 3. EL TRUCO: Un gradiente de color semi-transparente POR ENCIMA 
+       de la foto. Esto le da el "tinte" de nuestra paleta.
+       Va de nuestro turquesa (0.7 de opacidad) a nuestro 
+       azul océano (0.8 de opacidad).
+    */
+    linear-gradient(
+      135deg, 
+      rgba(0, 168, 150, 0.7), /* Turquesa claro */
+      rgba(0, 123, 138, 0.8)  /* Océano oscuro */
+    ),
+    /* 4. La URL de la imagen */
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80');
+
+  /* 5. Propiedades para que la imagen se vea perfecta */
+  
+  /* Hace que la imagen cubra toda la pantalla sin distorsionarse */
+  background-size: cover; 
+  
+  /* Centra la imagen */
+  background-position: center center; 
+  
+  /* Evita que la imagen se repita */
+  background-repeat: no-repeat;
+  
+  /* ¡Efecto Parallax! La imagen se queda fija 
+     mientras el contenido se desplaza por encima.
+  */
+  background-attachment: fixed; 
+
+  /* --- Estilos de Fuente Globales --- */
+  
+  /* 6. Aplicamos la fuente veraniega a todo el sitio */
+  font-family: 'Quicksand', sans-serif;
+  
+  /* 7. Color de texto principal
+     Como el fondo es oscuro/saturado, el texto general
+     debería ser claro. Las tarjetas de Bootstrap (.card)
+     ya tienen fondo blanco, así que se leerán bien.
+  */
+  color: #f4f4f4; /* Un blanco suave */
+
+  /* 8. Para asegurar que el HTML y el BODY ocupen el 100% */
+  min-height: 100vh;
+}
+
+/* Opcional: Asegurarse que el tag <html> ocupe todo */
+html {
+  height: 100%;
+}

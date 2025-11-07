@@ -1,14 +1,15 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-4" *ngFor="let persona of personas">
-            <div class="card mb-4">
+            <div class="card mb-4 summer-card">
                 <div class="card-body">
                     <h5 class="card-title">{{ persona.Nombre }}</h5>
                     <p class="card-text">
                         <strong>Email:</strong> {{ persona.Email }}<br>
                         <strong>Edad:</strong> {{ persona.Edad }} años
                     </p>
-                    <span class="badge bg-primary">ID: {{ persona.IdPersona }}</span>
+                    
+                    <span class="badge summer-badge">ID: {{ persona.IdPersona }}</span>
                 </div>
             </div>
         </div>
