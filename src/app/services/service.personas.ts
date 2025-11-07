@@ -15,22 +15,29 @@ export class ServicePersonas{
             this._http.get(url + request).subscribe(response => {
                 resolve(response);
             })
-            
         })
         return promise;
     }
-    async getPersonasAxios(): Promise<Array<Persona>> {
+
+    getPersonasAxios(): Promise<any> {
+        return new Promise((resolve) => {
         let url = environment.urlPers
         let request = "api/personas"
-        let response = await axios.get(url + request)
-        return response.data
+        axios.get(url + request).then(response => {
+            resolve(response.data)
+            })
+        })
     }
     
-    async getPersonasFetch(): Promise<Array<Persona>> {
+    getPersonasFetch(): Promise<any> {
+        return new Promise((resolve) => {
         let url = environment.urlPers
         let request = "api/personas"
-        let response = await fetch(url + request)
-        let data = await response.json()
-        return data
+        fetch(url + request)
+        .then(response => response.json())
+        .then(response => {
+            resolve(response.data)
+            })
+        })
     }
 }
