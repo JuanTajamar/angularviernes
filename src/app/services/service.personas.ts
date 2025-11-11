@@ -35,6 +35,9 @@ export class ServicePersonas{
         let promise = new Promise((resolve) => {
             fetch(url +request)
             .then(response => response.json())
+            .then(response => {
+                resolve(response)
+            })
         })
         return promise       
     }
