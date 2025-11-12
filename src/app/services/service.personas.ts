@@ -17,7 +17,6 @@ export class ServicePersonas{
         })
         return promise;
     }
-
     getPersonsasAxios():Promise<any>{
         let url = environment.urlPers
         let request = "api/personas"
@@ -40,5 +39,5 @@ export class ServicePersonas{
             })
         })
         return promise       
-    }
+
 }
