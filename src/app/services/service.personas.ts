@@ -38,6 +38,7 @@ export class ServicePersonas{
                 resolve(response)
             })
         })
-        return promise       
+        return promise
+    }    
 
 }
